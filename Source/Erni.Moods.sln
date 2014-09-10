@@ -11,6 +11,13 @@ Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "Erni.Moods.Windows", "Erni.
 EndProject
 Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "Erni.Moods.WindowsPhone", "Erni.Moods\Erni.Moods.WindowsPhone\Erni.Moods.WindowsPhone.jsproj", "{8A71D1BE-D639-4A3F-8F9D-5DDFF5564C9E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{AED596D2-539D-4ED9-9263-56114AA64878}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Erni.Moods\Erni.Moods.Shared\Erni.Moods.Shared.projitems*{2be583ba-8642-4af7-b156-413aca653805}*SharedItemsImports = 5
