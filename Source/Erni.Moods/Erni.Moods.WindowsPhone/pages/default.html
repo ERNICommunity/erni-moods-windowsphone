@@ -21,17 +21,39 @@
 <body class="phone">
     <h1>Hi, how are you today?</h1>
     <div id="mediumListIconTextTemplate" data-win-control="WinJS.Binding.Template">
-        <div style="border:1px solid white;">
-            <img src="#" style="width:100px; height:100px;"
+        <div class="mediumListIconTextItem">
+
+            <!-- Displays the "picture" field. -->
+            <img class="mediumListIconTextItem-Image"
+                 src="#"
                  data-win-bind="alt: title; src: picture" />
-            <div style="font:bold 12px arial,verdana;" data-win-bind="innerText: title"></div>
+            <div class="mediumListIconTextItem-Detail">
+                <h4 data-win-bind="innerText: title"></h4>
+                <h2 data-win-bind="innerText: text"></h2>
+            </div>
         </div>
     </div>
-    <div class="main-holder" id="viewStateExampleListView"
+
+    <!--<div id="mediumListIconTextTemplate" data-win-control="WinJS.Binding.Template" style="background-color:red;">
+        <div class="boxes">
+            <img src="#" style="width:100px; height:100px;"
+                 data-win-bind="alt: title; src: picture;" />
+            <div style="font:bold 24px arial,verdana; position: absolute; float: right;" data-win-bind="innerText: title"></div>
+        </div>
+    </div>-->
+
+
+    <div id="viewStateExampleListView" data-win-control="WinJS.UI.ListView"
+         data-win-options="{itemDataSource : moodsList.itemList.dataSource,
+        itemTemplate: select('#mediumListIconTextTemplate'),
+        layout: {type: WinJS.UI.GridLayout}}">
+    </div>
+
+    <!--<div class="main-holder" id="viewStateExampleListView" 
          data-win-control="WinJS.UI.ListView"
          data-win-options="{ itemDataSource : moodsList.itemList.dataSource,
          itemTemplate: select('#mediumListIconTextTemplate'),
          layout: {type: WinJS.UI.GridLayout}}">
-    </div>
+    </div>-->
 </body>
 </html>

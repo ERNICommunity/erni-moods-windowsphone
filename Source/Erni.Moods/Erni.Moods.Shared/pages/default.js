@@ -46,21 +46,6 @@
                 // Details in reason.Message and ex.HResult.
                 alert("Mood posting failed.");
             }
-
-            // Once your app is done using the HttpClient object call close to 
-            // free up system resources (the underlying socket and memory used for the object)
-            // httpClient.close();
-
-            //$.ajax("http://moodyrest.azurewebsites.net/moods", {
-            //    type: "POST",
-            //    data: data,
-            //    url: "default.html",
-            //    success: function () {
-            //        alert("Mood posted successfully.");
-            //    }, fail: function () {
-            //        alert("Mood posting failed.");
-            //    }
-            //});
         },
 
         updateLayout: function (element) {

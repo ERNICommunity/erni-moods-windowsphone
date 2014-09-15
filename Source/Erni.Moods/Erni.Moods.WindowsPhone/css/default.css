@@ -1,34 +1,109 @@
 ﻿body {
-    font-size:14px;
+    /*font-size:14px;
+    color: black;*/
+}
+
+h1
+{
+    margin: 5px 0 5px 10px;
 }
 
 .main-holder
 {
-    width:80%;
-    height:auto;
-    margin:20% 0;
+    border: 2px solid red;
+    overflow: hidden;
+    height:90%;
+    width:100%;
 }
-.ul-main
+
+.boxes
 {
-    text-anchor:middle;
-    font-weight:bold;
-    font-size: 1.25em;
-    height: 10%;
-    list-style-type:none;
+  width: 100%;
+  height: 120px;
+  float: left;
+  border: 1px solid white;
+  margin: 5px;
+  overflow: hidden;
+  color: white;
 }
-.ul-main li
+
+.main-boxes
 {
-    text-align:left;
-    font-size: 1.25em;
-    display:inline;
+  width: 450px;
+  height: auto;
+  overflow: hidden;
+  border: 1px solid red;
 }
-.ul-main input {
-    width: 200px;
-    height: 200px;
-    background-image: url('../images/face_angel.png');
-    background-repeat:no-repeat;
-    background-position:center;
-    vertical-align:bottom;
+
+
+#basicListView.win-listview 
+{
+    height: 500px; 
+}
+.win-listview
+{
+    width: 100%;
+    height: 300px;
+    margin: 25px 12%;
+    border: solid 2px rgba(0, 0, 0, 0.13);
+}
+
+.win-container
+{
+    width: 90%;
+    background-color:yellow;
+}
+
+.win-selectionbackground
+{
+    background-color: yellow;
+}
+
+#myListView .focusExample.win-listview .win-focusedoutline {
+    outline: red dashed 2px;
+                     
+}  
+
+/* Template for items */  
+.mediumListIconTextItem
+{
+    width: auto;
+    height: 70px;
+    padding: 5px;
+    overflow: hidden;
+    display: -ms-grid;
+    border: 1px solid gray;
+}
+
+    .mediumListIconTextItem img.mediumListIconTextItem-Image 
+    {
+        width: 60px;
+        height: 60px;
+        margin: 5px;
+        -ms-grid-column: 1;
+    }
+
+    .mediumListIconTextItem .mediumListIconTextItem-Detail
+    {
+        margin: 5px;
+        -ms-grid-column: 2;
+    }
+
+/* Change the size of the ListView when the app is snapped. */
+@media screen and (-ms-view-state: snapped) {
+     .win-listview
+    {
+        width: 300px;
+        height: 300px;
+    }
+}
+/* Change the size of the ListView when the app is in portrait mode. */
+@media screen and (-ms-view-state: fullscreen-portrait) {
+     .win-listview
+    {
+        width: 300px;
+        height: 600px;
+    }
 }
 
 

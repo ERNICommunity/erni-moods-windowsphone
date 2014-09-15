@@ -1,6 +1,6 @@
 ﻿(function () {
 
-    WinJS.UI.Pages.define("/default.html", {
+    WinJS.UI.Pages.define("/pages/default.html", {
         // This function is called whenever a user navigates to this page. It
         // populates the page elements with the app's data.
         ready: function (element, options) {
@@ -50,12 +50,12 @@
 
     "use strict";
     var dataArray = [
-        { title: "very happy", text: "VERY HAPPY", picture: "images/face_angel.png" },
-        { title: "good", text: "GOOD", picture: "images/face_angel.png" },
-        { title: "so so lala", text: "SO SO LALA", picture: "images/face_angel.png" },
-        { title: "not amuzed", text: "NOT AMUZED", picture: "images/face_angel.png" },
-        { title: "very moody", text: "VERY MOODY", picture: "images/face_angel.png" },
-        { title: "don't ask", text: "DON'T ASK!", picture: "images/face_angel.png" },
+        { title: "I am feeling", text: "VERY HAPPY", picture: "/images/veryHappy.png" },
+        { title: "I am doing", text: "GOOD", picture: "/images/good.png" },
+        { title: "I am feeling", text: "SO SO", picture: "/images/soSoLaLa.png" },
+        { title: "I am", text: "NOT AMUZED", picture: "/images/notAmused.png" },
+        { title: "I am feeling", text: "VERY MOODY", picture: "/images/veryMoody.png" },
+        { title: "Please", text: "DON'T ASK!", picture: "/images/veryMoody.png" },
     ];
 
     var dataList = new WinJS.Binding.List(dataArray);
