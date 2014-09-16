@@ -55,7 +55,7 @@
         { title: "I am feeling", text: "SO SO", picture: "/images/soSoLaLa.png" },
         { title: "I am", text: "NOT AMUZED", picture: "/images/notAmused.png" },
         { title: "I am feeling", text: "VERY MOODY", picture: "/images/veryMoody.png" },
-        { title: "Please", text: "DON'T ASK!", picture: "/images/veryMoody.png" },
+        { title: "Please", text: "DON'T ASK!", picture: "/images/dontAsk.png" },
     ];
 
     var dataList = new WinJS.Binding.List(dataArray);

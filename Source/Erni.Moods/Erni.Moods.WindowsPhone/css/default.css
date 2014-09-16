@@ -8,14 +8,6 @@ h1
     margin: 5px 0 5px 10px;
 }
 
-.main-holder
-{
-    border: 2px solid red;
-    overflow: hidden;
-    height:90%;
-    width:100%;
-}
-
 .boxes
 {
   width: 100%;

@@ -14,11 +14,13 @@
     <!-- Erni.Moods.Phone references -->
     <link href="/css/default.css" rel="stylesheet" />
     <script src="/Scripts/jquery-2.1.1.js"></script>
+    <script src="/js/moodsList.js"></script>
     <script src="/pages/default.js"></script>
     <script src="/js/default.js"></script>
-    <script src="/js/moodsList.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9Zwqyx9dvl0mugNZ33bIEwRdorEcx_xU"></script>
 </head>
 <body class="phone">
+    <img src="../images/erniMoods.png" style="margin: 5px 15%;" />
     <h1>Hi, how are you today?</h1>
     <div id="mediumListIconTextTemplate" data-win-control="WinJS.Binding.Template">
         <div class="mediumListIconTextItem">
@@ -28,7 +30,6 @@
                  src="#"
                  data-win-bind="alt: title; src: picture" />
             <div class="mediumListIconTextItem-Detail">
-                <h4 data-win-bind="innerText: title"></h4>
                 <h2 data-win-bind="innerText: text"></h2>
             </div>
         </div>
@@ -43,10 +44,11 @@
     </div>-->
 
 
-    <div id="viewStateExampleListView" data-win-control="WinJS.UI.ListView"
+    <div id="viewStateExampleListView" class="main-holder" 
+         data-win-control="WinJS.UI.ListView"
          data-win-options="{itemDataSource : moodsList.itemList.dataSource,
-        itemTemplate: select('#mediumListIconTextTemplate'),
-        layout: {type: WinJS.UI.GridLayout}}">
+         itemTemplate: select('#mediumListIconTextTemplate'),
+         layout: {type: WinJS.UI.GridLayout}}">
     </div>
 
     <!--<div class="main-holder" id="viewStateExampleListView" 

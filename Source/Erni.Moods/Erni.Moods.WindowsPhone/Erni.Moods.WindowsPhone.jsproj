@@ -50,6 +50,9 @@
     <AppxManifest Include="package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <Content Include="css\map.css" />
+    <Content Include="images\dontAsk.png" />
+    <Content Include="images\erniMoods.png" />
     <Content Include="images\face_angel.png" />
     <Content Include="images\good.png" />
     <Content Include="images\notAmused.png" />
@@ -68,6 +71,8 @@
     <Content Include="css\ui-themed.theme-light.css" />
     <Content Include="packages.config" />
     <Content Include="pages\default.html" />
+    <Content Include="pages\map.html" />
+    <Content Include="pages\mapWithMoods.html" />
     <Content Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
     <Content Include="Scripts\jquery-2.1.1.min.js" />

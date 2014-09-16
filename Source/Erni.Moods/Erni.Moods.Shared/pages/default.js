@@ -38,7 +38,7 @@
 
             // Always catch network exceptions for async methods
             httpClient.postAsync(uri, new Windows.Web.Http.HttpStringContent(JSON.stringify(data))).done(function () {
-                alert("Mood posted successfully.");
+                window.location = "/pages/mapWithMoods.html";
             }, onError);
 
 
