@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Erni.Moods.WindowsPhone</title>
+
+    <!-- WinJS references -->
+    <!-- At runtime, ui-themed.css resolves to ui-themed.light.css or ui-themed.dark.css
+    based on the user’s theme setting. This is part of the MRT resource loading functionality. -->
+    <link href="/css/ui-themed.css" rel="stylesheet" />
+    <script src="//Microsoft.Phone.WinJS.2.1/js/base.js"></script>
+    <script src="//Microsoft.Phone.WinJS.2.1/js/ui.js"></script>
+
+    <!-- Erni.Moods.Phone references -->
+    <link href="/css/default.css" rel="stylesheet" />
+    <script src="/Scripts/jquery-2.1.1.js"></script>
+    <script src="/js/users.js"></script>
+    <title>Users</title>
+</head>
+<body>
+    <div id="tmplUser" data-win-control="WinJS.Binding.Template">
+        <div>
+            username: <span data-win-bind="innerText:username"></span>
+            <br />
+            location: <span data-win-bind="innerText: location"></span>
+            <br />
+            comment: <span data-win-bind="innerText: comment"></span>
+            <br />
+            mood: <span data-win-bind="innerText: mood"></span>
+        </div>
+    </div>
+
+    <div id="lvUsers"
+         data-win-control="WinJS.UI.ListView"
+         data-win-options="{
+    itemTemplate: select('#tmplUser'),
+   itemDataSource : moodsList2.usersList.dataSource,
+                selectionMode: 'none'}"></div></body>
+</html>

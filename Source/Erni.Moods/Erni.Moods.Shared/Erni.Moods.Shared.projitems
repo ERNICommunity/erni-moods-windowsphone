@@ -9,6 +9,10 @@
     <Content Include="$(MSBuildThisFileDirectory)js\default.js" />
     <Content Include="$(MSBuildThisFileDirectory)js\map.js" />
     <Content Include="$(MSBuildThisFileDirectory)js\moodsList.js" />
+    <Content Include="$(MSBuildThisFileDirectory)js\users.js" />
     <Content Include="$(MSBuildThisFileDirectory)pages\default.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)js\js\" />
   </ItemGroup>
 </Project>

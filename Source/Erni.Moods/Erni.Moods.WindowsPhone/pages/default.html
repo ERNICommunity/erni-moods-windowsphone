@@ -52,10 +52,21 @@
     </div>
 
     <!--<div class="main-holder" id="viewStateExampleListView" 
-         data-win-control="WinJS.UI.ListView"
-         data-win-options="{ itemDataSource : moodsList.itemList.dataSource,
-         itemTemplate: select('#mediumListIconTextTemplate'),
-         layout: {type: WinJS.UI.GridLayout}}">
-    </div>-->
+             data-win-control="WinJS.UI.ListView"
+             data-win-options="{ itemDataSource : moodsList.itemList.dataSource,
+    itemTemplate: select('#mediumListIconTextTemplate'),
+    layout: {type: WinJS.UI.GridLayout}}">
+        </div>-->
+    
+    <div data-win-control="WinJS.UI.AppBar">
+        <button data-win-control="WinJS.UI.AppBarCommand"
+                data-win-options="{
+    id: 'cmdUsers',
+    label: 'map',
+    icon: 'map',
+    tooltip: 'Show users'
+
+                }"></button>
+    </div>
 </body>
 </html>

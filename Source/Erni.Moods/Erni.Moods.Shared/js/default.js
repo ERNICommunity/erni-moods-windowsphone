@@ -16,7 +16,12 @@
                 // TODO: This application has been reactivated from suspension.
                 // Restore application state here.
             }
-            args.setPromise(WinJS.UI.processAll());
+            args.setPromise(WinJS.UI.processAll().done(function() {
+                var cmdUsers = document.getElementById("cmdUsers");
+                cmdUsers.addEventListener("click", function () {
+                    window.location = "/pages/users.html";
+                });
+            }));
         }
     };
 
