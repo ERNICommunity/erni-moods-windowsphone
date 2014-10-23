@@ -4,6 +4,23 @@
     <title>Asynchronous Loading</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
+    <!-- WinJS references -->
+    <!-- At runtime, ui-themed.css resolves to ui-themed.light.css or ui-themed.dark.css
+    based on the user’s theme setting. This is part of the MRT resource loading functionality. -->
+    <link href="/css/ui-themed.css" rel="stylesheet" />
+    <script src="//Microsoft.Phone.WinJS.2.1/js/base.js"></script>
+    <script src="//Microsoft.Phone.WinJS.2.1/js/ui.js"></script>
+
+    <!-- Bing Map Control references -->
+    <script type="text/javascript" src="ms-appx:///Bing.Maps.JavaScript//js/veapicore.js"></script>
+
+    <!-- Erni.Moods.Phone references -->
+    <link href="/css/default.css" rel="stylesheet" />
+    <script src="/Scripts/jquery-2.1.1.js"></script>
+    <script src="/js/default.js"></script>
+    <script src="/pages/mapWithMoods.js"></script>
+    <!--<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9Zwqyx9dvl0mugNZ33bIEwRdorEcx_xU"></script>-->
+
     <style>
         html, body, #map-canvas {
             height: 100%;
@@ -12,31 +29,31 @@
         }
     </style>
     <script>
-        function initialize() {
-            var mapOptions = {
-                zoom: 8,
-                center: new google.maps.LatLng(-34.397, 150.644)
-            };
+        //function initialize() {
+        //    var mapOptions = {
+        //        zoom: 8,
+        //        center: new google.maps.LatLng(-34.397, 150.644)
+        //    };
 
-            var map = new google.maps.Map(document.getElementById('map-canvas'),
-                mapOptions);
-        }
+        //    var map = new google.maps.Map(document.getElementById('map-canvas'),
+        //        mapOptions);
+        //}
 
-        function loadScript() {
-            var script = document.createElement('script');
-            script.type = 'text/javascript';
-            script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&' +
-                'callback=initialize';
-            document.body.appendChild(script);
-            initialize();
-        }
+        //function loadScript() {
+        //    var script = document.createElement('script');
+        //    script.type = 'text/javascript';
+        //    script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&' +
+        //        'callback=initialize';
+        //    document.body.appendChild(script);
+        //    initialize();
+        //}
 
-        window.onload = loadScript;
+        //window.onload = loadScript;
 
     </script>
 </head>
 <body>
-    <div id="map-canvas"></div>
+    <div id="mapDiv"></div>
 </body>
 </html>
 
