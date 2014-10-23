@@ -242,6 +242,7 @@
     <Content Include="$(MSBuildThisFileDirectory)Bing.Maps.JavaScript\js\veapicore.js" />
     <Content Include="$(MSBuildThisFileDirectory)Bing.Maps.JavaScript\js\veapiModules.js" />
     <Content Include="$(MSBuildThisFileDirectory)js\default.js" />
+    <Content Include="$(MSBuildThisFileDirectory)js\erniMoods.js" />
     <Content Include="$(MSBuildThisFileDirectory)js\map.js" />
     <Content Include="$(MSBuildThisFileDirectory)js\moodsList.js" />
     <Content Include="$(MSBuildThisFileDirectory)js\users.js" />
