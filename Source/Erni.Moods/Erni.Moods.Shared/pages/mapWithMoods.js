@@ -10,6 +10,7 @@
     WinJS.UI.Pages.define("/pages/mapWithMoods.html", {
         _map: null,
         _moodsClient: new ErniMoods.ErniMoodsClient(),
+        _pinInfobox: null,
 
         processed: function (element) {
             return WinJS.Resources.processAll(element);
@@ -48,8 +49,34 @@
                         // show pushpins
                         for (var i in data) {
                             var user = data[i];
+                            var icon;
                             var location = new Microsoft.Maps.Location(user.location[0], user.location[1]);
-                            var pushpin = new Microsoft.Maps.Pushpin(location);
+
+                            switch (user.mood) {
+                                case 1:
+                                    icon = "ms-appx:///images/veryHappy.png";
+                                    break;
+                                case 2:
+                                    icon = "ms-appx:///images/good.png";
+                                    break;
+                                case 3:
+                                    icon = "ms-appx:///images/soSoLaLa.png";
+                                    break;
+                                case 4:
+                                    icon = "ms-appx:///images/notAmused.png";
+                                    break;
+                                case 5:
+                                    icon = "ms-appx:///images/veryMoody.png";
+                                    break;
+                                case 6:
+                                    icon = "ms-appx:///images/dontAsk.png";
+                                    break;
+                            }
+
+
+                            var pushpin = new Microsoft.Maps.Pushpin(location, { icon: icon, width: 100, height: 100 });
+                            pushpin.user = user;
+                            Microsoft.Maps.Events.addHandler(pushpin, 'click', function (e) { t._pushpinOnClick.call(t, e); });
                             t._map.entities.push(pushpin);
                         }
                     }
@@ -57,6 +84,28 @@
                 function () {
                     alert("Mood posting failed.");
                 });
+        },
+        _pushpinOnClick: function (e) {
+            var t = this;
+            t._hideCurrentInfobox();
+
+            if (e.target != null) {
+                var pushpin = e.target;
+                var pinInfobox = new Microsoft.Maps.Infobox(pushpin.getLocation(),
+                    {
+                        title: pushpin.user.username,
+                        description: "test"
+                    });
+                t._pinInfobox = pinInfobox;
+                t._map.entities.push(pinInfobox);
+            }
+        },
+        _hideCurrentInfobox: function () {
+            var t = this;
+            if (t._pinInfobox != null) {
+                t._map.entities.pop(t._pinInfobox);
+                t._pinInfobox = null;
+            }
         }
     });
 })();
