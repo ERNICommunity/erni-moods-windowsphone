@@ -59,7 +59,7 @@ h1
 /* Template for items */  
 .mediumListIconTextItem
 {
-    width: auto;
+    width: 80px;
     height: 70px;
     padding: 5px;
     overflow: hidden;
@@ -69,8 +69,8 @@ h1
 
     .mediumListIconTextItem img.mediumListIconTextItem-Image 
     {
-        width: 60px;
-        height: 60px;
+        width: 80px;
+        height: 80px;
         margin: 5px;
         -ms-grid-column: 1;
     }

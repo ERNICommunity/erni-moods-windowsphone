@@ -14,59 +14,58 @@
     <!-- Erni.Moods.Phone references -->
     <link href="/css/default.css" rel="stylesheet" />
     <script src="/Scripts/jquery-2.1.1.js"></script>
+    <script src="/js/SettingsRepository.js"></script>
     <script src="/js/moodsList.js"></script>
     <script src="/pages/default.js"></script>
-    <script src="/js/default.js"></script>
+    <!--<script src="/js/default.js"></script>-->
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9Zwqyx9dvl0mugNZ33bIEwRdorEcx_xU"></script>
+
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        .win-listview {
+            height: 600px;
+            width: 90%;
+            margin: 0 5%;
+            overflow: auto;
+        }
+    </style>
 </head>
 <body class="phone">
-    <img src="../images/erniMoods.png" style="margin: 5px 15%;" />
-    <h1>Hi, how are you today?</h1>
+    <header style="height:10%;">
+        <p style="color: #A0A0A0; text-shadow: 0px 2px 3px #555; font-weight:bold; font-size:40px; text-align:center;">How are you today?</p>
+    </header>
     <div id="mediumListIconTextTemplate" data-win-control="WinJS.Binding.Template">
-        <div class="mediumListIconTextItem">
-
-            <!-- Displays the "picture" field. -->
-            <img class="mediumListIconTextItem-Image"
-                 src="#"
-                 data-win-bind="alt: title; src: picture" />
-            <div class="mediumListIconTextItem-Detail">
-                <h2 data-win-bind="innerText: text"></h2>
+        <div style="background-color:#919191;">
+            <div style="width:140px; height:140px; padding:10px;">
+                <!-- Displays the "picture" field. -->
+                <img src="#" style="width:100px; height:100px; margin:10px 20px;"
+                     data-win-bind="alt: title; src: picture" />
+                <div>
+                    <!-- Displays the "text" field. -->
+                    <h6 style="text-align:center; color:#474747;" data-win-bind="innerText: text"></h6>
+                </div>
             </div>
         </div>
     </div>
 
-    <!--<div id="mediumListIconTextTemplate" data-win-control="WinJS.Binding.Template" style="background-color:red;">
-        <div class="boxes">
-            <img src="#" style="width:100px; height:100px;"
-                 data-win-bind="alt: title; src: picture;" />
-            <div style="font:bold 24px arial,verdana; position: absolute; float: right;" data-win-bind="innerText: title"></div>
-        </div>
-    </div>-->
-
-
-    <div id="viewStateExampleListView" class="main-holder" 
+    <div id="viewStateExampleListView" class="main-holder"
          data-win-control="WinJS.UI.ListView"
          data-win-options="{itemDataSource : moodsList.itemList.dataSource,
-         itemTemplate: select('#mediumListIconTextTemplate'),
-         layout: {type: WinJS.UI.GridLayout}}">
+             itemTemplate: select('#mediumListIconTextTemplate'),
+             layout: {type: WinJS.UI.GridLayout}}">
     </div>
 
-    <!--<div class="main-holder" id="viewStateExampleListView" 
-             data-win-control="WinJS.UI.ListView"
-             data-win-options="{ itemDataSource : moodsList.itemList.dataSource,
-    itemTemplate: select('#mediumListIconTextTemplate'),
-    layout: {type: WinJS.UI.GridLayout}}">
-        </div>-->
-    
-    <div data-win-control="WinJS.UI.AppBar">
+    <!--<div data-win-control="WinJS.UI.AppBar">
         <button data-win-control="WinJS.UI.AppBarCommand"
                 data-win-options="{
-    id: 'cmdUsers',
-    label: 'map',
-    icon: 'map',
-    tooltip: 'Show users'
-
-                }"></button>
-    </div>
+                    id: 'cmdUsers',
+                    label: 'map',
+                    icon: 'map',
+                    tooltip: 'Show users'
+            }"></button>
+    </div>-->
 </body>
-</html>

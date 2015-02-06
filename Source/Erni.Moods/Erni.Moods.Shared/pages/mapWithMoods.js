@@ -10,6 +10,7 @@
     WinJS.UI.Pages.define("/pages/mapWithMoods.html", {
         _map: null,
         _moodsClient: new ErniMoods.ErniMoodsClient(),
+        _usersClient: new ErniMoodsUsers.ErniMoodsUsersClient(),
         _pinInfobox: null,
 
         processed: function (element) {

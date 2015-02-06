@@ -24,7 +24,7 @@
   <Applications>
     <Application 
       Id="App"
-      StartPage="default.html">
+      StartPage="login.html">
 
       <m2:VisualElements
         DisplayName="Erni.Moods.Windows"

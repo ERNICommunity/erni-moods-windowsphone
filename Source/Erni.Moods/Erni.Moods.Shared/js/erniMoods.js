@@ -17,7 +17,8 @@
             var uri = new Windows.Foundation.Uri(url);
             var client = new Windows.Web.Http.HttpClient();
             
-            var requestPromise = null;
+            var method = Windows.Web.Http.HttpMethod.get;
+            var content = null;
             if (typeof (data) != "undefined" && data != null) {
                 var content = "";
                 if (typeof (data) == "String") {
@@ -26,10 +27,14 @@
                 else {
                     content = JSON.stringify(data);
                 }
-                requestPromise = client.postAsync(uri, new Windows.Web.Http.HttpStringContent(content));
+
+                method = Windows.Web.Http.HttpMethod.post;
             }
-            else {
-                requestPromise = client.getAsync(uri);
+
+            var request = new Windows.Web.Http.HttpRequestMessage(method, uri);
+            if (content != null) {
+                request.content = new Windows.Web.Http.HttpStringContent(content);
+                request.content.headers.contentType = new Windows.Web.Http.Headers.HttpMediaTypeHeaderValue("application/json");
             }
 
             return requestPromise.then(function (response) {

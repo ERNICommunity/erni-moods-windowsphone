@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Erni.Moods.WindowsPhone</title>
+
+    <!-- WinJS references -->
+    <!-- At runtime, ui-themed.css resolves to ui-themed.light.css or ui-themed.dark.css
+    based on the user’s theme setting. This is part of the MRT resource loading functionality. -->
+    <link href="/css/ui-themed.css" rel="stylesheet" />
+    <script src="//Microsoft.Phone.WinJS.2.1/js/base.js"></script>
+    <script src="//Microsoft.Phone.WinJS.2.1/js/ui.js"></script>
+
+    <!-- Erni.Moods.Phone references -->
+    <link href="/css/default.css" rel="stylesheet" />
+    <script src="/Scripts/jquery-2.1.1.js"></script>
+    <script src="/js/SettingsRepository.js"></script>
+    <script src="/js/moodsList.js"></script>
+    <script src="/js/erniMoodsUsers.js"></script>
+    <script src="/pages/login.js"></script>
+
+    <style>
+        body {
+            background-color: #28292A;
+            color: white;
+            padding: 20px;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sign In</h1>
+    </header>
+    <article id="signinPanel">
+        <h3>Username</h3>
+        <input type="text" id="username" style="width:80%; height:24px;" data-win-bind="value: username" />
+        <h3>Password</h3>
+        <input type="password" id="password" style="width:80%; height:24px; display: block;" data-win-bind="value: password" />
+        <button style="display:block; margin:15px 20%; height:40px; width:100px; float:right;" id="signinButton">Sign in</button>
+    </article>
+
+    <header>
+        <h1>Sign Up</h1>
+    </header>
+    <article id="signupPanel">
+        <h3>Username</h3>
+        <input type="text" id="signupUsername" style="width:80%; height:24px;" />
+        <h3>Phone</h3>
+        <input type="number" id="signupPhone" style="width:80%; height:24px; display: block;" />
+        <h3>Password</h3>
+        <input type="password" id="signupPassword" style="width:80%; height:24px; display: block;" />
+        <button style="display:block; margin:15px 20%; height:40px; width:100px; float:right;" id="signupButton">Sign up</button>
+    </article>
+</body>
+</html>

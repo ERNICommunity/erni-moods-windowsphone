@@ -6,6 +6,8 @@
     var session = WinJS.Application.sessionState;
     var util = WinJS.Utilities;
     WinJS.UI.Pages.define("/pages/default.html", {
+        _settingRepository: new ErniMoods.SettingsRepository(),
+
         processed: function (element) {
             return WinJS.Resources.processAll(element);
         },
@@ -13,8 +15,9 @@
         // This function is called whenever a user navigates to this page. It
         // populates the page elements with the app's data.
         ready: function (element, options) {
+            var t = this;
             var moodList = element.querySelector(".main-holder").winControl;
-            moodList.addEventListener("iteminvoked", this.onMoodSelect);
+            moodList.addEventListener("iteminvoked", function () { t.onMoodSelect.call(t); });
         },
 
         unload: function () {
@@ -22,6 +25,8 @@
         },
 
         onMoodSelect: function () {
+            var userKey = this._settingRepository.getUserKey();
+
             var data = {
                 "username": "someUsername",
                 "location": [
